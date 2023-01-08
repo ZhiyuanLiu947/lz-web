@@ -1,0 +1,75 @@
+
+.my-nav-bar{
+    position:relative;
+}
+
+.my-navbar-button {
+    position: relative;
+    letter-spacing:2px;
+    font-family: sans-serif;
+    display:table;
+    margin:20px;
+    cursor:pointer;
+    transition:.6s;
+    color: #AAAAAA;
+    text-decoration: none;
+    font-size: 36px;
+    width: auto;
+}
+
+.my-navbar-button:before,
+.my-navbar-button:after {
+    content:attr(data-text);
+    transition:.6s;
+}
+
+.my-navbar-button:before {
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index:-1;
+    text-shadow:
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px,
+        0px 0px;
+    -webkit-mask:repeating-linear-gradient(20deg, transparent 0 2px, rgba(0,0,0,0.5) 0 3px);
+            mask:repeating-linear-gradient(20deg, transparent 0 2px, rgba(0,0,0,0.5) 0 3px);
+}
+
+.my-navbar-button:hover {
+    transform:translate(-6px,-6px);
+} 
+
+.my-navbar-button:hover:before {
+    text-shadow:
+        1px 1px,
+        2px 2px,
+        3px 3px,
+        4px 4px,
+        5px 5px,
+        6px 6px,
+        7px 7px,
+        8px 8px;
+}
+
+.my-navbar-button.active {
+    color: #FFFFFF;
+    transform:translate(-6px,-6px);
+} 
+
+.my-navbar-button.active:before {
+    text-shadow:
+        1px 1px,
+        2px 2px,
+        3px 3px,
+        4px 4px,
+        5px 5px,
+        6px 6px,
+        7px 7px,
+        8px 8px;
+}
