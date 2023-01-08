@@ -59,7 +59,7 @@
     color:#fff;
     transform-style:preserve-3d;
     transition:0.8s;
-    font-size: 640px;
+    font-size: 512px;
   }
   .error-code span:nth-child(1){
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
@@ -69,7 +69,7 @@
   
   .error-code span:nth-child(2){
     color:rgb(100, 100, 100);
-    transform:translate(-50%,-50%) skewX(-39.5deg);
+    transform:translate(-50%,-50%) skewX(-45deg);
     left:-38px;
     clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
   }

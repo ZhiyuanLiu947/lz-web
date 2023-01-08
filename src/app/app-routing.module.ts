@@ -10,8 +10,7 @@ const routes: Routes = [
     { path: "about", component: AboutComponent },
     { path: "projects", component: ProjectListComponent },
     { path: "themes", component: UiThemeListComponent },
-    { path: "404", component: PageNotFoundComponent },
-    { path: "", redirectTo: "/404", pathMatch: "prefix" }
+    { path: "**", component: PageNotFoundComponent}
 ];
 
 @NgModule({
