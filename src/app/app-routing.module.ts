@@ -3,13 +3,16 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./about/about.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProjectListComponent } from "./project-list/project-list.component";
+import { ProjectProjectCodexComponent } from "./project-project-codex/project-project-codex.component";
 import { UiThemeListComponent } from "./ui-theme-list/ui-theme-list.component";
 
 const routes: Routes = [
     { path: "", redirectTo: "/about", pathMatch: "full" },
     { path: "about", component: AboutComponent },
+    { path: "**", component: PageNotFoundComponent},
     { path: "projects", component: ProjectListComponent },
     { path: "themes", component: UiThemeListComponent },
+    { path: "projects/project-codex", component: ProjectProjectCodexComponent},
     { path: "**", component: PageNotFoundComponent}
 ];
 
@@ -19,4 +22,4 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
-export const routingComponents = [AboutComponent, ProjectListComponent, UiThemeListComponent, PageNotFoundComponent]
+export const routingComponents = [AboutComponent, ProjectListComponent, UiThemeListComponent, PageNotFoundComponent, ProjectProjectCodexComponent]

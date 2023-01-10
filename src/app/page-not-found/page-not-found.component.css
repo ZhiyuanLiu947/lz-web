@@ -6,7 +6,7 @@
     transform:translate(-50%,-50%);
     margin:0;
     padding:0;
-    background-image: -webkit-repeating-linear-gradient(60deg, #fff, #fff 2px, rgb(0, 0, 0) 2px, rgb(0, 0, 0) 4px);
+    background-image: -webkit-repeating-linear-gradient(60deg, #5E17EB, #5E17EB 2px, rgb(0, 0, 0) 2px, rgb(0, 0, 0) 4px);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -21,7 +21,7 @@
     content: attr(data-text);
     left: 15px;
     position: absolute;
-    text-shadow: 1px 1px 0px #5E17EB;
+    text-shadow: 1px 1px 0px #ffffff;
     top: -.05em;
     text-transform: uppercase;
 }
@@ -56,7 +56,7 @@
     padding:0;
     text-transform:uppercase;
     font-size:12em;
-    color:#fff;
+    color:rgb(100, 100, 100);
     transform-style:preserve-3d;
     transition:0.8s;
     font-size: 512px;
@@ -68,7 +68,7 @@
   
   
   .error-code span:nth-child(2){
-    color:rgb(100, 100, 100);
+    color:rgb(70, 70, 70);
     transform:translate(-50%,-50%) skewX(-45deg);
     left:-38px;
     clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
@@ -84,5 +84,5 @@
   .error-code:hover span:nth-child(3){
     transform:translate(-50%,-50%) skewX(0deg);
     left:0;
-    color:#fff;
+    color:rgb(100, 100, 100);
   }

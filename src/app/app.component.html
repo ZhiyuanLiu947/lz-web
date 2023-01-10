@@ -1,17 +1,18 @@
-<div class="my-header"></div>
-<div class="container">
-
-    <nav class="navbar">
-        <div class="container-fluid">
-            <a class="my-navbar-button" routerLink="/about" routerLinkActive="active" data-text="Zhiyuan"></a>
-            <div class="d-flex">
-                <a class="my-navbar-button" routerLink="/projects" routerLinkActive="active" data-text="My Work"></a>
-                <a class="my-navbar-button" routerLink="/themes" routerLinkActive="active" data-text="My UI Themes"></a>
+<div class="fixed-top my-header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="my-navbar-button" routerLink="/about" routerLinkActive="active" data-text="Zhiyuan"></a>
+                <div class="d-flex">
+                    <a class="my-navbar-button" routerLink="/projects" routerLinkActive="active" data-text="My Work"></a>
+                    <!-- <a class="my-navbar-button" routerLink="/themes" routerLinkActive="active" data-text="My UI Themes"></a> -->
+                </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </div>
+    <div class="divider-horizontal"></div>
+</div>
 
-    
-
+<div class="my-body-container">
     <router-outlet></router-outlet>
 </div>

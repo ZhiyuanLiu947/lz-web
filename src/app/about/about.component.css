@@ -1,0 +1,11 @@
+.my-status-card{
+    background-color: transparent;
+    margin: 180px auto;
+}
+
+.current-logo{
+    flex-shrink: 0;
+    min-width: 100%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
