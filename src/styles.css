@@ -32,7 +32,6 @@ body{
     height: 20px;
 }
 
-.my-name{
-    font-size: 120px;
-    margin-bottom: 8px;
+.card-transparent{
+    background-color: rgba(0, 0, 0, 0);
 }
