@@ -39,3 +39,8 @@ body{
 .hidden-with-space{
     opacity: 0;
 }
+
+.component-header{
+    height: 120px;
+    width: 100%;
+}

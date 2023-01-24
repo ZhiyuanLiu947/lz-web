@@ -1,18 +1,23 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./about/about.component";
+import { InProgressPageComponent } from "./in-progress-page/in-progress-page.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProjectListComponent } from "./project-list/project-list.component";
 import { ProjectProjectCodexComponent } from "./project-project-codex/project-project-codex.component";
-import { UiThemeListComponent } from "./ui-theme-list/ui-theme-list.component";
+import { SequenceMatchingComponent } from "./sequence-matching/sequence-matching.component";
 
 const routes: Routes = [
     { path: "", redirectTo: "/about", pathMatch: "full" },
     { path: "about", component: AboutComponent },
-    { path: "**", component: PageNotFoundComponent},
     { path: "projects", component: ProjectListComponent },
-    { path: "themes", component: UiThemeListComponent },
-    { path: "projects/project-codex", component: ProjectProjectCodexComponent},
+    { path: "projects/sequence-matching", component: InProgressPageComponent},
+    { path: "projects/yelp-business-search", component: InProgressPageComponent},
+    { path: "projects/go-game-ai", component: InProgressPageComponent},
+    { path: "projects/project-codex", component: InProgressPageComponent},
+    // { path: "projects/sequence-matching", component: SequenceMatchingComponent},
+    // { path: "projects/project-codex", component: ProjectProjectCodexComponent},
+    { path: "projects/404", component: PageNotFoundComponent},
     { path: "**", component: PageNotFoundComponent}
 ];
 
@@ -22,4 +27,10 @@ const routes: Routes = [
 })
 
 export class AppRoutingModule { }
-export const routingComponents = [AboutComponent, ProjectListComponent, UiThemeListComponent, PageNotFoundComponent, ProjectProjectCodexComponent]
+export const routingComponents = [
+    AboutComponent, 
+    ProjectListComponent, 
+    PageNotFoundComponent,
+    InProgressPageComponent,
+    SequenceMatchingComponent, 
+    ProjectProjectCodexComponent]
