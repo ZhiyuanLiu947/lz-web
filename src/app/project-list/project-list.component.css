@@ -50,6 +50,7 @@
 
 .project-card{
     max-width: 280px;
+    height: 266px;
     margin-bottom: 24px;
     cursor: pointer;
 }
@@ -67,5 +68,17 @@
 
 .card-tools{
     height: 48px;
+    overflow: auto;
+}
+
+.project-ui-image{
+    width: 278px;
+    height: 176px;
+    object-fit: contain;
+    background: #000000;
+}
+
+.card-tools-ui{
+    height: 24px;
     overflow: auto;
 }
