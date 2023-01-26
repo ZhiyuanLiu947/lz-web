@@ -1,0 +1,158 @@
+.clock-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+}
+
+.ribbon{
+    content: "";
+    display: block;
+    width: 50%;
+    height: 100%;
+    border-radius: 300px 0 0 300px;
+    background-image: linear-gradient(#5E17EB,#ff1efe,#ff8ab7,#000000);
+    transform-origin: right center;
+    z-index: -1;
+}
+
+.ribbon-mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    content: "";
+    display: block;
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    background-color: #000000;
+}
+
+.center-point{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 2px;
+    height: 101%;
+}
+
+.line::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #aaaaaa;
+}
+
+.line::before {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background-color: #aaaaaa;
+}
+
+.line:nth-child(2) {
+    transform: rotate(30deg);
+}
+.line:nth-child(3) {
+    transform: rotate(60deg);
+}
+.line:nth-child(4) {
+    transform: rotate(90deg);
+}
+.line:nth-child(5) {
+    transform: rotate(120deg);
+}
+.line:nth-child(6) {
+    transform: rotate(150deg);
+}
+
+.line.big{
+    width: 3px;
+}
+
+.line.big::after{
+    background-color: #ffffff;
+}
+
+.line.big::before{
+    background-color: #ffffff;
+}
+
+.hour-hand{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    width: 6px;
+    height: calc(50% - 60px);
+    margin: auto;
+    background-color: #ffffff;
+    transform-origin: bottom;
+}
+
+.minute-hand{
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    width: 4px;
+    height: calc(50% - 20px);
+    margin: auto;
+    background-color: #c7c7c7;
+    transform-origin: bottom;
+}
+
+.second-hand{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 50%;
+    margin: auto;
+    background-color: #929292;
+    transform-origin: center bottom;
+}
+
+.second-hand::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 2px;
+    height: 2px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px 12px #ffffff;
+    display: block;
+}

@@ -1,0 +1,20 @@
+<div class="component-header"></div>
+<div class="component-header"></div>
+<div class="container">
+    <div class="clock-container">
+        <div [ngStyle]="{'transform':'rotate('+secondDegree+'deg)'}" class="ribbon"></div>
+        <div class="ribbon-mask"></div>
+        <div class="center-point"></div>
+        <div class="line-container">
+            <div class="line big"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line big"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div [ngStyle]="{'transform':'rotate('+hourDegree+'deg)'}" class="hour-hand"></div>
+        <div [ngStyle]="{'transform':'rotate('+minuteDegree+'deg)'}" class="minute-hand"></div>
+        <div [ngStyle]="{'transform':'rotate('+secondDegree+'deg)'}" class="second-hand"></div>
+    </div>
+</div>

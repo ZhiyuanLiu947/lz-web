@@ -10,6 +10,7 @@ export class ProjectListComponent{
     public sideButton = ["side-button-active", "side-button", "side-button", "side-button", "side-button"];
     
     //HiddenTags = algorithms, applications, games, ui
+    public showAll = false;
     public hiddenTags = [false,false,false,false];
 
     showProjects(type:number){
@@ -17,9 +18,11 @@ export class ProjectListComponent{
         this.sideButton[type] = "side-button-active";
 
         if (type == 0){
+            this.showAll = false;
             this.hiddenTags = [false,false,false,false];
         }
         else{
+            this.showAll = true;
             this.hiddenTags = [true,true,true,true];
             this.hiddenTags[type-1]=false
         }

@@ -1,95 +1,116 @@
-<div class="container">
-    <div class="row">
-        <div class="col tab-col pe-4 border-end">
-            <div class="component-header"></div>
-            <div class="flex-column align-items-stretch selection-bar">
-                <div [ngClass]="sideButton[0]" (click)="showProjects(0)">All</div>
-                <div [ngClass]="sideButton[1]" (click)="showProjects(1)">Algorithms</div>
-                <div [ngClass]="sideButton[2]" (click)="showProjects(2)">Applications</div>
-                <div [ngClass]="sideButton[3]" (click)="showProjects(3)">Games</div>
-                <div [ngClass]="sideButton[4]" (click)="showProjects(4)">User Interface</div>
-            </div>
+<div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasFilterLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasFilterLabel">Filter</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="flex-column align-items-stretch selection-bar">
+            <div [ngClass]="sideButton[0]" (click)="showProjects(0)">All</div>
+            <div [ngClass]="sideButton[1]" (click)="showProjects(1)">Algorithms</div>
+            <div [ngClass]="sideButton[2]" (click)="showProjects(2)">Applications</div>
+            <div [ngClass]="sideButton[3]" (click)="showProjects(3)">Games</div>
+            <div [ngClass]="sideButton[4]" (click)="showProjects(4)">User Interface</div>
         </div>
+    </div>
+  </div>
+
+
+<div class="container">
+    <div class="component-header"></div>
+    <div class="container">
+        <div class="projects-heading h1 text-white" data-bs-toggle="offcanvas" href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter" [hidden]="showAll">All</div>
+        <div class="projects-heading h1 text-white" data-bs-toggle="offcanvas" href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter" [hidden]="!showAll || hiddenTags[0]">Algorithms</div>
+        <div class="projects-heading h1 text-white" data-bs-toggle="offcanvas" href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter" [hidden]="!showAll || hiddenTags[1]">Applications</div>
+        <div class="projects-heading h1 text-white" data-bs-toggle="offcanvas" href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter" [hidden]="!showAll || hiddenTags[2]">Games</div>
+        <div class="projects-heading h1 text-white" data-bs-toggle="offcanvas" href="#offcanvasFilter" role="button" aria-controls="offcanvasFilter" [hidden]="!showAll || hiddenTags[3]">User Interface</div>
+    </div>
     
-        <div class="col projects-container">
-            <div class="component-header"></div>
-            <div class="container projects-card-container">
-                <div class="row row-cols-auto">
-                    <div class="col" [hidden]="hiddenTags[0]">
-                        <div class="card text-bg-dark project-card" routerLink="/projects/sequence-matching">
-                            <div class="card-body">
-                                <h5 class="card-title">DNA Sequence Matching</h5>
-                                <div class="card-body-text-container">
-                                    <p class="card-body-text">Match two DNA sequences with two algorithms.</p>
-                                    <p class="card-body-text">One is classic dynamic programming algorithm and another one is dynamic programming with divide and conquer (memory efficient) algorithm.</p>
-                                </div>
-                                <div class="card-tools">
-                                    <small class="text-muted">Java, C++, Python, Dynamic Programming, Divide and Conquer</small>
-                                </div>
-                            </div>
+    <div class="container projects-card-container">
+        <div class="row row-cols-auto">
+            <div class="col" [hidden]="hiddenTags[0]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/sequence-matching">
+                    <div class="card-body">
+                        <h5 class="card-title">DNA Sequence Matching</h5>
+                        <div class="card-body-text-container">
+                            <p class="card-body-text">Match two DNA sequences with two algorithms.</p>
+                            <p class="card-body-text">One is classic dynamic programming algorithm and another one is dynamic programming with divide and conquer (memory efficient) algorithm.</p>
+                        </div>
+                        <div class="card-tools">
+                            <small class="text-muted">Java, C++, Python, Dynamic Programming, Divide and Conquer</small>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col" [hidden]="hiddenTags[1]">
-                        <div class="card text-bg-dark project-card" routerLink="/projects/yelp-business-search">
-                            <div class="card-body">
-                                <h5 class="card-title">Yelp Business Search</h5>
-                                <div class="card-body-text-container">
-                                    <p class="card-body-text">Web Application and Android Application.</p>
-                                    <p class="card-body-text">Allows users to search and make/manage reservations through yelp API and google API.</p>
-                                    <p class="card-body-text">Backend services are deployed on GCP.</p>
-                                </div>
-                                <div class="card-tools">
-                                    <small class="text-muted">HTML, CSS, JavaScript, Express framework, Angular, TypeScript, Bootstrap, AJAX, Restful API, GCP</small>
-                                </div>
-                            </div>
+            <div class="col" [hidden]="hiddenTags[1]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/yelp-business-search">
+                    <div class="card-body">
+                        <h5 class="card-title">Yelp Business Search</h5>
+                        <div class="card-body-text-container">
+                            <p class="card-body-text">Web Application and Android Application.</p>
+                            <p class="card-body-text">Allows users to search and make/manage reservations through yelp API and google API.</p>
+                            <p class="card-body-text">Backend services are deployed on GCP.</p>
+                        </div>
+                        <div class="card-tools">
+                            <small class="text-muted">HTML, CSS, JavaScript, Express framework, Angular, TypeScript, Bootstrap, AJAX, Restful API, GCP</small>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col" [hidden]="hiddenTags[0] && hiddenTags[2]">
-                        <div class="card text-bg-dark project-card" routerLink="/projects/go-game-ai">
-                            <div class="card-body">
-                                <h5 class="card-title">Little Go Game AI</h5>
-                                <div class="card-body-text-container">
-                                    <p class="card-body-text">Two AI that plays the little Go game.</p>
-                                    <p class="card-body-text">One AI is using Alpha-Beta Pruning algorithm, another one is trained with Q-learning algorithm.</p>
-                                    <p class="card-body-text">Both are reimplement in TypeScript.</p>
-                                </div>
-                                <div class="card-tools">
-                                    <small class="text-muted">C++, Python, Alpha-Beta Pruning, Q-learning</small>
-                                </div>
-                            </div>
+            <div class="col" [hidden]="hiddenTags[0] && hiddenTags[2]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/go-game-ai">
+                    <div class="card-body">
+                        <h5 class="card-title">Little Go Game AI</h5>
+                        <div class="card-body-text-container">
+                            <p class="card-body-text">Two AI that plays the little Go game.</p>
+                            <p class="card-body-text">One AI is using Alpha-Beta Pruning algorithm, another one is trained with Q-learning algorithm.</p>
+                            <p class="card-body-text">Both are reimplement in TypeScript.</p>
+                        </div>
+                        <div class="card-tools">
+                            <small class="text-muted">C++, Python, Alpha-Beta Pruning, Q-learning</small>
                         </div>
                     </div>
-                    
-                    <div class="col" [hidden]="hiddenTags[2]">
-                        <div class="card text-bg-dark project-card" routerLink="/projects/project-codex">
-                            <div class="card-body">
-                                <h5 class="card-title">ze_project_codex</h5>
-                                <div class="card-body-text-container">
-                                    <p class="card-body-text">A zombie escape map for CS:GO.</p>
-                                    <p class="card-body-text">Multiple stages with color themes, containing boss fights and escape path with traps. Cool visual design</p>
-                                    <p class="card-body-text">Available on multiple community servers.</p>
-                                </div>
-                                <div class="card-tools">
-                                    <small class="text-muted">Source Engine, Game Scripting (VScript), 3D modeling, Level Design</small>
-                                </div>
-                            </div>
+                </div>
+            </div>
+            
+            <div class="col" [hidden]="hiddenTags[2]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/project-codex">
+                    <div class="card-body">
+                        <h5 class="card-title">ze_project_codex</h5>
+                        <div class="card-body-text-container">
+                            <p class="card-body-text">A zombie escape map for CS:GO.</p>
+                            <p class="card-body-text">Multiple stages with color themes, containing boss fights and escape path with traps. Cool visual design</p>
+                            <p class="card-body-text">Available on multiple community servers.</p>
+                        </div>
+                        <div class="card-tools">
+                            <small class="text-muted">Source Engine, Game Scripting (VScript), 3D modeling, Level Design</small>
                         </div>
                     </div>
+                </div>
+            </div>
 
-                    <div class="col" [hidden]="hiddenTags[3]">
-                        <div class="card text-bg-dark project-card" routerLink="/projects/shaking-bottle">
-                            <img src="../../assets/uiPreview/ui-shaking-bottle.png" class="card-img-top project-ui-image">
-                            <div class="card-body">
-                                <h5 class="card-title">Shaking Water Bottle</h5>
-                                <div class="card-tools-ui">
-                                    <small class="text-muted">UI, HTML, CSS</small>
-                                </div>
-                            </div>
+            <div class="col" [hidden]="hiddenTags[3]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/shaking-bottle">
+                    <img src="../../assets/uiPreview/ui-shaking-bottle.png" class="card-img-top project-ui-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Shaking Water Bottle</h5>
+                        <div class="card-tools-ui">
+                            <small class="text-muted">UI, HTML, CSS</small>
                         </div>
                     </div>
+                </div>
+            </div>
 
+            <div class="col" [hidden]="hiddenTags[3]">
+                <div class="card text-bg-dark project-card" routerLink="/projects/clock-ribbon">
+                    <img src="../../assets/uiPreview/ui-clock-ribbon.png" class="card-img-top project-ui-image">
+                    <div class="card-body">
+                        <h5 class="card-title">Clock with Ribbon</h5>
+                        <div class="card-tools-ui">
+                            <small class="text-muted">UI, HTML, CSS, TypeScript/JavaScript</small>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
