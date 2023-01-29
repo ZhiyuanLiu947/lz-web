@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UiClockRibbonComponent implements OnInit{
 
-    intervalId : any;
-    secondDegree : any;
-    minuteDegree : any;
-    hourDegree : any;
+    public intervalId : any;
+    public secondDegree : any;
+    public minuteDegree : any;
+    public hourDegree : any;
 
     ngOnInit(){
         this.timeNow();

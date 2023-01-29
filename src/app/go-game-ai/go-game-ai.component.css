@@ -1,0 +1,155 @@
+.board{
+    display: block;
+    margin: auto;
+    z-index: 0;
+    background-size: contain;
+    width: 340px;
+    padding: 20px;
+}
+
+.board-line{
+    display: block;
+    position: relative;
+    height: 60px;
+    width:300px;
+    margin-bottom: 0;
+}
+
+.board-box{
+    width: 60px;
+    height: 60px;
+    margin-left: 0;
+    float: left;
+    transition: all 0.2s;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.board-background{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg-normal{
+    background-image: url("../../assets/goGameBoard/normal.png");
+}
+
+.bg-left{
+    background-image: url("../../assets/goGameBoard/left.png");
+}
+
+.bg-right{
+    background-image: url("../../assets/goGameBoard/right.png");
+}
+
+.bg-top{
+    background-image: url("../../assets/goGameBoard/top.png");
+}
+
+.bg-bottom{
+    background-image: url("../../assets/goGameBoard/bottom.png");
+}
+
+.bg-left-top{
+    background-image: url("../../assets/goGameBoard/left-top.png");
+}
+
+.bg-right-top{
+    background-image: url("../../assets/goGameBoard/right-top.png");
+}
+
+.bg-left-bottom{
+    background-image: url("../../assets/goGameBoard/left-bottom.png");
+}
+
+.bg-right-bottom{
+    background-image: url("../../assets/goGameBoard/right-bottom.png");
+}
+
+.block-able{
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+.block-able:hover{
+    background-color: #5e17eb69;
+}
+
+.block-unable {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+}
+.block-unable:before, .block-unable:after {
+    position: absolute;
+    left: 26px;
+    content: ' ';
+    height: 60px;
+    width: 8px;
+    border-radius: 4px;
+    background-color: rgb(255, 0, 0);
+}
+.block-unable:before {
+    transform: rotate(45deg);
+}
+.block-unable:after {
+    transform: rotate(-45deg);
+}
+
+.block-unable:hover {
+    opacity: 0.3;
+}
+
+.block-player{
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #5e17ebe0;
+    animation: MakeMove 0.2s forwards;
+}
+
+.block-ai{
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #acacace0;
+    animation: MakeMove 0.2s forwards;
+}
+
+@keyframes MakeMove{
+    from { transform: scale(.1,.1); }
+    to { transform: scale(1,1); }
+}
+
+.block-player-die{
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #5e17ebe0;
+    animation: chessrDie 0.2s forwards;
+}
+
+.block-ai-die{
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #acacace0;
+    animation: chessrDie 0.2s forwards;
+}
+
+@keyframes chessrDie{
+    from { transform: scale(1,1); }
+    to { transform: scale(0,0); }
+}
+

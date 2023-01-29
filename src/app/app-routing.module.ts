@@ -1,6 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AboutComponent } from "./about/about.component";
+import { GoGameAiComponent } from "./go-game-ai/go-game-ai.component";
 import { InProgressPageComponent } from "./in-progress-page/in-progress-page.component";
 import { PageNotFoundComponent } from "./page-not-found/page-not-found.component";
 import { ProjectListComponent } from "./project-list/project-list.component";
@@ -15,7 +16,7 @@ const routes: Routes = [
     { path: "projects", component: ProjectListComponent },
     { path: "projects/sequence-matching", component: InProgressPageComponent},
     { path: "projects/yelp-business-search", component: InProgressPageComponent},
-    { path: "projects/go-game-ai", component: InProgressPageComponent},
+    { path: "projects/go-game-ai", component: GoGameAiComponent},
     { path: "projects/project-codex", component: InProgressPageComponent},
     { path: "projects/shaking-bottle", component: UiShakingBottleComponent},
     { path: "projects/clock-ribbon", component: UiClockRibbonComponent},
@@ -37,6 +38,7 @@ export const routingComponents = [
     PageNotFoundComponent,
     InProgressPageComponent,
     SequenceMatchingComponent, 
+    GoGameAiComponent,
     ProjectProjectCodexComponent,
     UiShakingBottleComponent,
     UiClockRibbonComponent]
