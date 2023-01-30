@@ -4,44 +4,48 @@
     <div class="board">
 
         <div class="board-line">
-            <div class="board-background bg-left-top"><div class="board-box" [ngClass]="blockClass[0][0]" (click)="makeMove(0,0)"></div></div>
-            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][1]" (click)="makeMove(0,1)"></div></div>
-            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][2]" (click)="makeMove(0,2)"></div></div>
-            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][3]" (click)="makeMove(0,3)"></div></div>
-            <div class="board-background bg-right-top"><div class="board-box" [ngClass]="blockClass[0][4]" (click)="makeMove(0,4)"></div></div>
+            <div class="board-background bg-left-top"><div class="board-box" [ngClass]="blockClass[0][0]" (click)="allowPlayerMakeMove ? makeMove(0,0) : ''"></div></div>
+            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][1]" (click)="allowPlayerMakeMove ? makeMove(0,1) : ''"></div></div>
+            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][2]" (click)="allowPlayerMakeMove ? makeMove(0,2) : ''"></div></div>
+            <div class="board-background bg-top"><div class="board-box" [ngClass]="blockClass[0][3]" (click)="allowPlayerMakeMove ? makeMove(0,3) : ''"></div></div>
+            <div class="board-background bg-right-top"><div class="board-box" [ngClass]="blockClass[0][4]" (click)="allowPlayerMakeMove ? makeMove(0,4) : ''"></div></div>
         </div>
 
         <div class="board-line">
-            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[1][0]" (click)="makeMove(1,0)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][1]" (click)="makeMove(1,1)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][2]" (click)="makeMove(1,2)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][3]" (click)="makeMove(1,3)"></div></div>
-            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[1][4]" (click)="makeMove(1,4)"></div></div>
+            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[1][0]" (click)="allowPlayerMakeMove ? makeMove(1,0) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][1]" (click)="allowPlayerMakeMove ? makeMove(1,1) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][2]" (click)="allowPlayerMakeMove ? makeMove(1,2) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[1][3]" (click)="allowPlayerMakeMove ? makeMove(1,3) : ''"></div></div>
+            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[1][4]" (click)="allowPlayerMakeMove ? makeMove(1,4) : ''"></div></div>
         </div>
 
 
         <div class="board-line">
-            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[2][0]" (click)="makeMove(2,0)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][1]" (click)="makeMove(2,1)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][2]" (click)="makeMove(2,2)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][3]" (click)="makeMove(2,3)"></div></div>
-            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[2][4]" (click)="makeMove(2,4)"></div></div>
+            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[2][0]" (click)="allowPlayerMakeMove ? makeMove(2,0) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][1]" (click)="allowPlayerMakeMove ? makeMove(2,1) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][2]" (click)="allowPlayerMakeMove ? makeMove(2,2) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[2][3]" (click)="allowPlayerMakeMove ? makeMove(2,3) : ''"></div></div>
+            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[2][4]" (click)="allowPlayerMakeMove ? makeMove(2,4) : ''"></div></div>
         </div>
 
         <div class="board-line">
-            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[3][0]" (click)="makeMove(3,0)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][1]" (click)="makeMove(3,1)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][2]" (click)="makeMove(3,2)"></div></div>
-            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][3]" (click)="makeMove(3,3)"></div></div>
-            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[3][4]" (click)="makeMove(3,4)"></div></div>
+            <div class="board-background bg-left"><div class="board-box" [ngClass]="blockClass[3][0]" (click)="allowPlayerMakeMove ? makeMove(3,0) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][1]" (click)="allowPlayerMakeMove ? makeMove(3,1) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][2]" (click)="allowPlayerMakeMove ? makeMove(3,2) : ''"></div></div>
+            <div class="board-background bg-normal"><div class="board-box" [ngClass]="blockClass[3][3]" (click)="allowPlayerMakeMove ? makeMove(3,3) : ''"></div></div>
+            <div class="board-background bg-right"><div class="board-box" [ngClass]="blockClass[3][4]" (click)="allowPlayerMakeMove ? makeMove(3,4) : ''"></div></div>
         </div>
 
         <div class="board-line">
-            <div class="board-background bg-left-bottom"><div class="board-box" [ngClass]="blockClass[4][0]" (click)="makeMove(4,0)"></div></div>
-            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][1]" (click)="makeMove(4,1)"></div></div>
-            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][2]" (click)="makeMove(4,2)"></div></div>
-            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][3]" (click)="makeMove(4,3)"></div></div>
-            <div class="board-background bg-right-bottom"><div class="board-box" [ngClass]="blockClass[4][4]" (click)="makeMove(4,4)"></div></div>
+            <div class="board-background bg-left-bottom"><div class="board-box" [ngClass]="blockClass[4][0]" (click)="allowPlayerMakeMove ? makeMove(4,0) : ''"></div></div>
+            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][1]" (click)="allowPlayerMakeMove ? makeMove(4,1) : ''"></div></div>
+            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][2]" (click)="allowPlayerMakeMove ? makeMove(4,2) : ''"></div></div>
+            <div class="board-background bg-bottom"><div class="board-box" [ngClass]="blockClass[4][3]" (click)="allowPlayerMakeMove ? makeMove(4,3) : ''"></div></div>
+            <div class="board-background bg-right-bottom"><div class="board-box" [ngClass]="blockClass[4][4]" (click)="allowPlayerMakeMove ? makeMove(4,4) : ''"></div></div>
+        </div>
+
+        <div class="board-line text-center">
+            <button type="button" class="btn btn-dark" (click)="makeMovePass()">PASS</button>
         </div>
 
     </div>
